@@ -14,22 +14,56 @@
 
 
       <!-- YOUR CODE STARTS HERE -->
-      
-      <img src="assets/food.png">
+      <div class="container">
+         <header class="metabar">
+            <a class="metabar__button" href="#" title="back"><span class="fa fa-angle-left"></span></a>
+            <div class="metabar__headline">
+               <h1 class="metabar__title">Photo</h1>
+            </div>
+            <a class="metabar__button--small" href="#" title="Refresh"><span class="fa fa-repeat"></span></a>
+         </header>
+         <main class="content-frame">
+            <div class="masthead">
+               <div class="userinfo">
+                  <div class="userinfo__avatar">
+                     <div class="avatar-stub">JC</div>
+                  </div>
+                  <div class="userinfo__content">
+                     <div class="userinfo__name">grubstreet</div>
+                     <div class="userinfo__location">ichiran, ny <span class="fa fa-angle-right"></span></div>
+                  </div>
+               </div>
+               <a class="userinfo__button" href="#" title="More"><span class="fa fa-ellipsis-h"></span></a>
+            </div>
+            <div class="media">
+               <div class="media__element">
+                  <img src="assets/food.png" alt="food">
+               </div>
+               <div class="media__actions">
+                  <ul class="media__actions-list">
+                     <li class="media__actions-item"><a href="#" title=""><span class="fa fa-heart-o"></span></a></li>
+                     <li class="media__actions-item"><a href="#" title=""><span class="fa fa-comment-o"></span></a></li>
+                     <li class="media__actions-item"><a href="#" title=""><span class="fa fa-paper-plane-o"></span></a></li>
+                     <li class="media__actions-item--last"><a href="#" title=""><span class="fa fa-bookmark-o"></span></a></li>
+                  </ul>
+               </div>
+               <div class="media__stats">924 likes</div>
+               <div class="media__comments">
+                  <span class="media__user">grubstreet</span> Who knew tonkotsu ramen is at its best when consumed alone inside a "flavor concentration booth"? @ichiranny are onto something, as their 🍜 is pretty great. The noodles are exceptional, and you can custom-calibrate everything from the richness of the broth to the strength of the tare. 📸: Rebecca Fondren
+               </div>
+            </div>
+         </main>
+         <footer class="metabar--bottom">
+               <a class="metabar__button--dim" href="#" title="Home"><span class="fa fa-home"></span></a>
+               <a class="metabar__button" href="#" title="Search"><span class="fa fa-search"></span></a>
+               <a class="metabar__button--dim" href="#" title="Add"><span class="fa fa-plus-square-o"></span></a>
+               <a class="metabar__button--dim" href="#" title="Like"><span class="fa fa-heart-o"></span></a>
+               <a class="metabar__button--dim" href="#" title="Profile"><span class="fa fa-user-o"></span></a>
+         </footer>
+      </div>
+
       <div>
-        <span class="fa fa-angle-left"></span>
-        <span class="fa fa-repeat"></span>
-        <span class="fa fa-angle-right"></span>
-        <span class="fa fa-ellipsis-h"></span>
-        <span class="fa fa-heart-o"></span>
-        <span class="fa fa-comment-o"></span>
-        <span class="fa fa-paper-plane-o"></span>
-        <span class="fa fa-bookmark-o"></span>
-        <span class="fa fa-home"></span>
-        <span class="fa fa-search"></span>
-        <span class="fa fa-plus-square-o"></span>
-        <span class="fa fa-heart-o"></span>
-        <span class="fa fa-user-o"></span>
+
       </div>
 
 
@@ -39,6 +73,7 @@
     </div>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link rel="stylesheet" href="src/base.css">
     <link rel="stylesheet" href="style.css">
 </body>

@@ -1,10 +1,224 @@
+:root {
+   --container-border-color: #CFCFCF;
+   --container-width: 360px;
+   --container-padding: 0 12px;
 
+   --masthead-background: #fafafa;
+   --masthead-border: #f2f2f2;
 
-/* --- YOUR CODE STARTS HERE --- */
+   --button-color: #484848;
+   --button-color-dim: #7e7e7e;
 
+   --media-comment-link-color: #547394;
+}
 
+* {
+   -webkit-overflow-scrolling: touch;
+   box-sizing: inherit;
+}
 
+*::before, *::after { box-sizing: inherit; }
 
+html { box-sizing: border-box; }
 
+body {
+   background-color: #fff;
+   color: #000;
+   text-align: left;
+}
 
-/* --- YOUR CODE ENDS HERE --- */
+/**
+ * Always make sure FontAwesome icons inherit the size
+ * and the color of its parent
+ */
+.fa {
+   color: inherit;
+   font-size: inherit;
+}
+
+/**
+ * Wraps the whole thing
+ */
+.container {
+   border: 1px solid var(--container-border-color);
+   display: flex;
+   flex-direction: column;
+   height: 622px;
+   margin: 0 auto;
+   overflow: hidden;
+   position: relative;
+   text-align: left; /** need to set this because .column has a text-align: center and we don't want to inherit that */
+   width: var(--container-width);
+}
+
+.content-frame {
+   flex: 1;
+   overflow: auto;
+   padding-bottom: 15px;
+}
+
+/**
+ * Metabar component -- top and bottom bars
+ */
+.metabar,
+.metabar--bottom {
+   align-content: center;
+   align-items: center;
+   background-color: var(--masthead-background);
+   border-bottom: 1px solid var(--masthead-border);
+   border-top: 1px solid var(--masthead-border);
+   display: flex;
+   height: 45px;
+   justify-content: space-between;
+   padding: var(--container-padding);
+   width: 100%;
+}
+
+.metabar--bottom {
+   border-bottom: 0;
+   border-top: 1px solid var(--masthead-border);
+   bottom: 0;
+   justify-content: space-around;
+}
+
+.metabar__headline { width: 50%; }
+
+.metabar__title {
+   font-size: 1.05rem;
+   text-align: center;
+}
+
+.metabar__button,
+.metabar__button--dim {
+   color: var(--button-color);
+   display: inline-block;
+   font-size: 1.7rem;
+}
+
+.metabar__button--dim { color: var(--button-color-dim); }
+
+.metabar__button--small { font-size: 1.4rem; }
+
+.metabar__button > .fa,
+.metabar__button--small {
+   color: inherit;
+   font-size: inherit;
+}
+
+/**
+ * Masthead component
+ */
+.masthead {
+   align-content: center;
+   align-items: center;
+   display: flex;
+   height: 50px;
+   justify-content: space-between;
+   padding: var(--container-padding);
+}
+
+/**
+ * STUB -- This would probably be a real image
+ */
+.avatar-stub {
+   background-color: var(--container-border-color);
+   border-radius: 100%;
+   border: none;
+   font-size: 0.8rem;
+   height: 31px;
+   line-height: 31px;
+   text-align: center;
+   width: 31px;
+}
+
+/**
+ * Userinfo component
+ */
+.userinfo {
+   align-content: center;
+   align-items: center;
+   display: flex;
+   display: flex;
+   width: 50%;
+}
+
+.userinfo__content {
+   font-size: 0.8rem;
+   padding-left: 10px;
+}
+
+.userinfo__name { font-weight: bolder; }
+
+.userinfo__location {
+   font-size: 0.7rem;
+   font-weight: lighter;
+   text-transform: uppercase;
+}
+.userinfo__button { color: var(--button-color); }
+
+/**
+ * Media Component
+ */
+.media {
+   display:flex;
+   flex-wrap: wrap;
+   overflow: hidden;
+}
+
+.media__element { width: 100%; }
+
+.media__stats {
+   font-size: 0.9rem;
+   font-weight: bolder;
+   height: 21px;
+   letter-spacing: -0.5px;
+   padding: var(--container-padding);
+}
+
+.media__comments {
+   font-size: 0.8rem;
+   line-height: 1.3;
+   padding: var(--container-padding);
+}
+
+.media__comments a {
+   text-decoration: none;
+   color: var(--media-comment-link-color);
+}
+
+.media__user { font-weight: bolder; }
+
+/**
+ * Media Sub-Component: Media Actions
+ */
+
+.media__actions {
+   padding: var(--container-padding);
+   width: 100%;
+}
+
+.media__actions-list {
+   align-content: center;
+   align-items: center;
+   display: flex;
+   height: 45px;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+.media__actions-item--last {
+   margin-left: auto;
+   margin-right: 0;
+}
+
+.media__actions-item > a,
+.media__actions-item--last > a {
+   color: inherit;
+   font-size: 1.4rem;
+   padding: 10px;
+}
+
+.media__actions-item:first-of-type > a { padding-left: 0;}
+.media__actions-item--last > a { padding-right: 0; }
